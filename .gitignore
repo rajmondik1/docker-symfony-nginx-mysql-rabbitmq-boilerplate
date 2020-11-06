@@ -161,3 +161,7 @@ modules.xml
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+/.idea
+.DS_Store
+._.DS_Store
