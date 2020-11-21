@@ -37,16 +37,13 @@ services:
         command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
         restart: always
         environment:
+            MYSQL_DATABASE: testdb
             MYSQL_ROOT_PASSWORD: toor
             MYSQL_USERNAME: root
             MYSQL_PASSWORD: toor
-
-    adminer:
-        image: adminer
-        restart: always
-        ports:
-            - 3000:8080
+            MYSQL_ALLOW_EMPTY_PASSWORD: false
 
     rabbitmq:
         image: rabbitmq:3.8-management
+        container_name: rabbitmq_container
         ports: [5672, 15672]
