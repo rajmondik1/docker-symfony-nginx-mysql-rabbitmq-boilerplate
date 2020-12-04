@@ -8,17 +8,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IndexController extends AbstractController
+class IndexController extends ApiController
 {
     /**
      * @Route(path="/", name="index")
      *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function index(): ?Response
     {
-        return $this->json('Success');
+        return $this->apiJsonResponse('Success');
     }
+
+    // TODO: https://symfony.com/doc/current/components/security.html
 
     /**
      * @Route(path="/test", name="test")
