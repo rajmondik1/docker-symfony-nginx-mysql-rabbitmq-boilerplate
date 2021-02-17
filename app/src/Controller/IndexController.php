@@ -23,7 +23,7 @@ class IndexController extends ApiController
     // TODO: https://symfony.com/doc/current/components/security.html
 
     /**
-     * @Route(path="/test", name="test")
+     * @Route(path="/test", name="app_index")
      *
      * @param MessageBusInterface $bus
      * @return \Symfony\Component\HttpFoundation\JsonResponse
